@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  </head>
+  <body>
+    
+    
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+    <main class="container" padding="4" id="form">
+        <h1>Registreer</h1>
+    <p>Meld je aan bij Anoroc Services, wij beschermen jouw software tegen malware!</p>
+        <div class="row g-3">
+            <div class="col">
+                <label for="inputnaam" class=""form-control>Voornaam</label>
+              <input type="text" class="form-control" placeholder="Uw voornaam" aria-label="Uw voornaam" id="voornaam">
+            </div>
+            <div class="col">
+                <label for="inputnaam" class=""form-control>Naam</label>
+              <input type="text" class="form-control" placeholder="Uw naam" aria-label="Uw naam" id="naam">
+            </div>
+          </div>
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label for="inputGebruikersnaam" class="form-label">Gebruikersnaam</label> 
+                <div class="input-group">
+                    <div class="input-group-text">@</div>
+                    <input type="text" class="form-control" id="Gebruikersnaam" placeholder="u911236">
+                  </div>
+            </div>
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">E-mailadres</label>
+                <input type="email" class="form-control" id="email" placeholder="mail@example.be" aria-label="mail@example.be">
+            </div>
+            <div class="col-md-6">
+                <label id="password" for="inputPassword4" class="password">Wachtwoord</label>
+                <input type="password" class="form-control id="inputPassword1">
+              </div>
+              <div class="col-md-6">
+                <label id="password1" for="inputPassword4" class="password1">Wachtwoord</label>
+                <input type="password" class="form-control" id="inputPassword2">
+              </div>
+            <div class="col-12">
+              <label for="inputAddress" class="form-label">Addres</label>
+              <input type="text" class="form-control" id="adress" placeholder="Uw adress en huisnummer">
+            </div>
+           
+            <div class="col-md-4">
+                <label for="inputState" class="form-label">Land</label>
+                <select id="land" class="form-select">
+                    <option selected>Kies een land</option>
+                    <option>Nederland</option>
+                    <option>Frankrijk</option>
+                    <option>Duitsland</option>
+                    <option>Belgie</option>
+                  </select>
+            </div>
+            <div class="col-md-4">
+              <label for="inputPtovincie" class="form-label">Provincie</label>
+              <select id="Provincie" class="form-select">
+                <option selected>Kies een provincie</option>
+                <option>Antwerpen</option>
+                <option>Limburg</option>
+                <option>Oost-Vlaanderen</option>
+                <option>West-Vlaanderen</option>
+              </select>
+            </div>
+            
+            <div class="col-md-4">
+                <label for="postcode">Postcode</label>
+                <input type="number" class="form-control" id="postcode">
+            </div>
+            <hr>
+            <div class="col-6">
+                <h3>Hou me op de hoogte</h3>
+              <div class="form-check">
+                
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                  Inschrijven voor onze nieuwsbrief
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                  Ik ga akkoord met de algemene voorwaarden
+                </label>
+              </div>
+            </div>
+            <div class="col-6"> 
+                <h2>Betaling</h2>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Banking app
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      Overschrijving
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      Visa card
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      Paypal
+                    </label>
+                  </div>
+            </div>
+            <hr>
+            
+                <div class="col-12" >
+                    <button id="knopsub" onclick="validateForm()" type="submit" class="btn btn-primary" style="width: 100%;">Wave ur magic wand</button>
+                    
+                </div>
+            
+          
+    
+          </form>
+          
+    </main>
+    
+      <script>
+        //bij let error staan al de errors
+        let error = ['Het veld voornaam is vereist', 'Het veld naam is vereist', 'Het veld Gebruikersnaam is vereist', 'Het veld adres is vereist', 'Het veld land is vereist', 'Het veld provincie is vereist']
+        const  knop = document.getElementById('knopsub');
+
+        //
+        function validateForm() {
+            checkEmptyField();
+            checkPassword(); 
+            checkPC(); 
+
+            
+        }
+       
+        //Hier ga ik controleren of de velden zijn ingevuld en als het niet zo is return ik een alert
+        function checkEmptyField() {
+            let voornaam =document.getElementById('voornaam').value;
+            let naam = document.getElementById ('naam').value;
+            let Gebruikersnaam = document.getElementById('Gebruikersnaam').value;
+            let adress = document.getElementById('adress').value;
+            let land=document.getElementById('land').value;
+            let Provincie=document.getElementById('Provincie').value;
+            
+            
+
+
+             if ( voornaam == "") {
+
+              alert("Het veld voornaam is vereist");
+                return false;
+         
+            }
+
+            if (naam == "") {
+                alert("Het veld naam is vereist");
+                return false;
+            }
+
+            if (Gebruikersnaam == "") {
+                alert("Het veld gebruikersnaam is vereist");
+                return false;
+            }
+            if (adress == "") {
+                alert("Het veld adress is vereist");
+                return false;
+            }
+            if (land == "") {
+                alert("Het veld land is vereist");
+                return false;
+            }
+            if (Provincie == "") {
+                alert("Het veld Provincie is vereist");
+                return false;
+            }
+
+            
+            
+        }
+
+        //hier ga ik het wachtwoord controleren eerst of het hetzelfde is en daarna of het langer is als zeven
+        function checkPassword() {
+          var password = getElementById('password');
+          var password1 = getElementById('password1');
+
+          if (password.value == password1.value) {
+            alert("Wachtwoorden komen niet overeen")
+            return false;
+          }
+
+           if (password.length < 7) {
+            alert("Wachtwoord is te kort");
+                return false;
+           }
+        }
+
+        function validateEmail() {
+            
+        }
+
+        function validatePayment() {
+            
+        }
+        //hier ga ik checken of de postcode is ingevuld en dat die de gegeven waarde is
+        function checkPC() {
+          let postcode =document.getElementById('postcode').value;
+            if (postcode == "") {
+              alert("Het veld postcode is vereist")
+              return false;
+            }
+        }
+
+        knop.addEventListener('click', validateForm, false);
+      </script>
+  </body>
+</html>
